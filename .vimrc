@@ -146,7 +146,7 @@ set pastetoggle=<F2>
 set guioptions+=a
 "補完候補を表示する。コマンドライン補完が拡張モードで行われる
 set wildmenu
-"Vimがテキストを整形する方法を決定するオプション"
+"Vimがテキストを整形する方法を決定するオプション
 set formatoptions+=M
 
 " ---indent---
@@ -206,8 +206,6 @@ autocmd FileType perl,cgi :compiler perl
 map <F4>  :w !perl<CR>
 "!perl command
 map <F5>  :!perl %<CR>
-
-
 
 "-----------------------------
 " keymap
