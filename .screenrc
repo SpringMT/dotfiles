@@ -1,0 +1,31 @@
+autodetach on
+escape ^Z^Z
+startup_message off
+vbell off
+defscrollback 10000
+
+defkanji utf-8
+defencoding utf-8
+encoding utf-8 utf-8
+
+bind ^U encoding utf8
+bind ^E encoding euc
+bind ^J encoding sjis
+
+
+caption always "%{kG}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{kG}%?%+Lw%? %{kc}%=%c:%s %Y-%m-%d"
+
+bind n screen
+bind h prev
+bind j next
+bind l windowlist
+
+bind r eval 'echo "Resize window"' 'command -c resize'
+bind -c resize ^] command
+bind -c resize j eval 'resize +1' 'command -c resize'
+bind -c resize k eval 'resize -1' 'command -c resize'
+bind -c resize J eval 'resize +2' 'command -c resize'
+bind -c resize K eval 'resize -2' 'command -c resize'
+
+markkeys h=^b:l=^f:$=^e:^d=^v
+caption always "%{kG}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{kG}%?%+Lw%? %{kc}%=%c:%s %Y-%m-%d"

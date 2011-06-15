@@ -1,2 +1,8 @@
 Spring_MT dotfiles
 
+screen -c hogehoge -S haruyama
+ctr z + d
+screen -ls
+screen -r PID
+
+
