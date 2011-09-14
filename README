@@ -1,5 +1,19 @@
 Spring_MT dotfiles
+# common conf
+## .bashrc
+if [ -f $HOME/dotfiles/.bashrc ]; then
+    source $HOME/dotfiles/.bashrc
+fi
+## .vimrc
+if filereadable(expand('~/dotfiles/.vimrc'))
+  source ~/dotfiles/.vimrc
+endif
+## .screenrc
+if [ -f $HOME/dotfiles/.screenrc ]; then
+    source $HOME/dotfiles/.screenrc
+fi
 
+# screen memo
 screen -c hogehoge -S haruyama
 ctr z + d
 screen -ls
