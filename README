@@ -1,17 +1,36 @@
 Spring_MT dotfiles
 # common conf
-## .bashrc
+# .bashrc
 if [ -f $HOME/dotfiles/.bashrc ]; then
     source $HOME/dotfiles/.bashrc
 fi
-## .vimrc
+# .vimrc
 if filereadable(expand('~/dotfiles/.vimrc'))
   source ~/dotfiles/.vimrc
 endif
-## .screenrc
+# .screenrc
 if [ -f $HOME/dotfiles/.screenrc ]; then
     source $HOME/dotfiles/.screenrc
 fi
+
+# Vundle install memo
+1. https://github.com/gmarik/vundleをfork
+2. git submodule add git@github.com:SpringMT/vundle.git .vim/bundle/vundle
+3. .vimrcに追記
+(unite-outlineはforkして持ってきている)
+4. Launch vim, run :BundleInstall.
+= ref =
+ * Vundle
+http://shu-cream.blogspot.com/2011/04/2011vimvundle.html
+https://github.com/gmarik/vundle
+http://d.hatena.ne.jp/sugilog/20110813/1313200935
+http://d.hatena.ne.jp/h1mesuke/20101107/p1
+https://github.com/Shougo/unite.vim/wiki/unite-plugins
+https://github.com/h1mesuke/unite-outline
+
+ * git submodule and fork
+http://blog.s21g.com/articles/1401
+http://subtech.g.hatena.ne.jp/miyagawa/20090114/1231910461
 
 # screen memo
 screen -c hogehoge -S haruyama
