@@ -2,7 +2,7 @@ set rtp+=~/dotfiles/.vim/bundle/vundle/
 call vundle#rc()
 " My Bundles here
 Bundle 'unite.vim'
-Bundle 'git://github.com/SpringMT/unite-outline.git'
+Bundle 'git@github.com:SpringMT/unite-outline.git'
 
 "-----------------------------
 " base setting
