@@ -8,8 +8,13 @@ export JLESSCHARSET=japanese-ujis
 
 # alias
 alias rm='rm -i'
-alias ll='ls -lGa'
-alias ls='ls -G'
+if [ `uname` = "Darwin" ]; then
+    alias ll='ls -lGa'
+    alias ls='ls -G'
+elif [ `uname` = "Linux" ]; then
+    alias ll='ls -l --color=tty'
+    alias ls='ls --color=tty'
+fi
 
 # git
 if [ -r "/usr/local/etc/bash_completion.d/git-completion.bash" ]; then
