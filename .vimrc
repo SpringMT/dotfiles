@@ -8,7 +8,10 @@ Bundle 'git@github.com:SpringMT/unite-outline.git'
 " base setting
 "-----------------------------
 "カラースキーマを設定
-colorscheme desert
+"colorscheme ron
+"colorscheme darkblue
+"colorscheme elflord
+"colorscheme molokai
 " 暗い配色にする
 set background=dark
 "viとの互換性をとらない
