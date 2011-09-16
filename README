@@ -13,6 +13,22 @@ if [ -f $HOME/dotfiles/.screenrc ]; then
     source $HOME/dotfiles/.screenrc
 fi
 
+# bash memo
+# vim memo
+vim -u ~/dotfiles/.vimrc
+read!
+vim --help
+# screen memo
+screen -c ~/dotfiles/.screenrc -S Spring_MT
+ctr z + d
+screen -ls
+screen -r PID
+bash -c source ~/dotfiles/.bashrc && screen -U -c ~/dotfiles/.screenrc -DR Spring_MT
+bash --rcfile ~/dotfiles/.bashrc
+SCREEN -dRR Spring_MT -c ~/dotfiles/.screenrc
+# emacs
+emacs -l ~/.emacs/init.el -nw file_name
+
 # Vundle install memo
 1. https://github.com/gmarik/vundleをfork
 2. git submodule add git@github.com:SpringMT/vundle.git .vim/bundle/vundle
@@ -50,11 +66,4 @@ https://github.com/h1mesuke/unite-outline
  * git submodule and fork
 http://blog.s21g.com/articles/1401
 http://subtech.g.hatena.ne.jp/miyagawa/20090114/1231910461
-
-# screen memo
-screen -c hogehoge -S haruyama
-ctr z + d
-screen -ls
-screen -r PID
-
 
