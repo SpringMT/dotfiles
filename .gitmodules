@@ -1,9 +1,6 @@
 [submodule ".vim/bundle/vundle"]
 	path = .vim/bundle/vundle
 	url = git@github.com:SpringMT/vundle.git
-[submodule ".vim/bundle/autocomplpop"]
-	path = .vim/bundle/autocomplpop
-	url = https://github.com/vim-scripts/AutoComplPop.git
 [submodule ".vim/bundle/AutoComplPop"]
 	path = .vim/bundle/AutoComplPop
 	url = git@github.com:SpringMT/AutoComplPop.git
