@@ -3,6 +3,7 @@ call vundle#rc()
 " My Bundles here
 Bundle 'unite.vim'
 Bundle 'git@github.com:SpringMT/unite-outline.git'
+Bundle 'git@github.com:SpringMT/AutoComplPop.git'
 
 "-----------------------------
 " base setting
@@ -137,6 +138,18 @@ endif
 highlight CursorLine cterm=bold ctermbg=black guibg=black
 
 "-----------------------------
+" compl
+"-----------------------------
+autocmd FileType * let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i'
+" ポップアップメニューのカラーを設定
+"hi Pmenu guibg=#666666 guifg=#666666
+"hi PmenuSel guibg=#8cd0d3 guifg=#666666
+"hi PmenuSbar guibg=#333333 guifg=#666666
+highlight Pmenu ctermbg=0
+highlight PmenuSel ctermbg=4
+highlight PMenuSbar ctermbg=0
+
+"-----------------------------
 " edit
 "-----------------------------
 " 括弧にカーソルが移ると対括弧がハイライト表示
@@ -216,6 +229,15 @@ map <F4>  :w !perl<CR>
 "!perl command
 map <F5>  :!perl %<CR>
 
+augroup SkeletonAu
+    autocmd!
+    autocmd BufNewFile *.pl 0r $HOME/dotfiles/.vim/skel.pl
+    autocmd BufNewFile *.pm 0r $HOME/dotfiles/.vim/skel.pm
+    autocmd BufNewFile 00-compile.t 0r $HOME/dotfiles/.vim/skel_00-compile.t
+    autocmd BufNewFile 01-call_func.t 0r $HOME/dotfiles/.vim/skel_01-call_func.t
+    autocmd BufNewFile \%(00-compile\|01\-call_func\)\@!*.t 0r $HOME/dotfiles/.vim/skel.t
+augroup END
+
 "-----------------------------
 " keymap
 "-----------------------------
@@ -274,4 +296,4 @@ imap <C-x><C-f>  <ESC>:e
 
 " その他
 map  <C-x><C-e>  :Explore<CR>
-
+map <F6>  <ESC>:set encoding=utf8<CR>

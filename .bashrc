@@ -1,5 +1,6 @@
 # path self bin
 PATH=$HOME/skybluesky/bin:$PATH
+PATH=$HOME/bin:$PATH
 export PATH
 
 # less
