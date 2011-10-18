@@ -148,6 +148,12 @@ autocmd FileType * let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i'
 highlight Pmenu ctermbg=0
 highlight PmenuSel ctermbg=4
 highlight PMenuSbar ctermbg=0
+inoremap ,s <ESC>:AutoComplPopDisable<CR>a
+inoremap ,q <ESC>:AutoComplPopEnable<CR>a
+nnoremap ,s :AutoComplPopDisable<CR>
+nnoremap ,q :AutoComplPopEnable<CR>
+inoremap <expr> ,t
+            \ (exists('#AcpGlobalAutoCommand#InsertEnter#*')) ? "\<C-o>:AutoComplPopDisable\<CR>" : "\<C-o>:AutoComplPopEnable\<CR>"
 
 "-----------------------------
 " edit
