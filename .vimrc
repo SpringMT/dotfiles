@@ -231,11 +231,11 @@ map <F5>  :!perl %<CR>
 
 augroup SkeletonAu
     autocmd!
-    autocmd BufNewFile *.pl 0r $HOME/dotfiles/.vim/skel.pl
-    autocmd BufNewFile *.pm 0r $HOME/dotfiles/.vim/skel.pm
-    autocmd BufNewFile 00-compile.t 0r $HOME/dotfiles/.vim/skel_00-compile.t
-    autocmd BufNewFile 01-call_func.t 0r $HOME/dotfiles/.vim/skel_01-call_func.t
-    autocmd BufNewFile \%(00-compile\|01\-call_func\)\@!*.t 0r $HOME/dotfiles/.vim/skel.t
+    autocmd BufNewFile *.pl 0r $HOME/dotfiles/.vim/skel/skel.pl
+    autocmd BufNewFile *.pm 0r $HOME/dotfiles/.vim/skel/skel.pm
+    autocmd BufNewFile 00-compile.t 0r $HOME/dotfiles/.vim/skel/skel_00-compile.t
+    autocmd BufNewFile 01-call_func.t 0r $HOME/dotfiles/.vim/skel/skel_01-call_func.t
+    autocmd BufNewFile \%(00-compile\|01\-call_func\)\@!*.t 0r $HOME/dotfiles/.vim/skel/skel.t
 augroup END
 
 "-----------------------------
