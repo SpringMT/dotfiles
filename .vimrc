@@ -4,6 +4,7 @@ call vundle#rc()
 Bundle 'unite.vim'
 Bundle 'git@github.com:SpringMT/unite-outline.git'
 Bundle 'git@github.com:SpringMT/AutoComplPop.git'
+Bundle 'git@github.com:SpringMT/mru.vim.git'
 
 "-----------------------------
 " base setting
