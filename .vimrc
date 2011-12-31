@@ -302,5 +302,6 @@ imap <C-x><C-f>  <ESC>:e
  imap <C-/> <ESC>ui
 
 " その他
-map  <C-x><C-e>  :Explore<CR>
+"ウィンドウを縦に分割して、左側にExploreを起動
+map  <C-x><C-e> :Vexplore<CR>
 map <F6>  <ESC>:set encoding=utf8<CR>
