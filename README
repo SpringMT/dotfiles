@@ -29,12 +29,16 @@ SCREEN -dRR Spring_MT -c ~/dotfiles/.screenrc
 # emacs
 emacs -l ~/.emacs/init.el -nw file_name
 
-# Vundle install memo
+# Vundle install memo マシン新たに作るとき
 1. https://github.com/gmarik/vundleをfork
-2. git submodule add git@github.com:SpringMT/vundle.git .vim/bundle/vundle
-3. .vimrcに追記
+1. git clone git@github.com:SpringMT/vundle.git ~/.vim/bundle/vundle
+1. git submodule add git@github.com:SpringMT/vundle.git .vim/bundle/vundle
+1. .vimrcに追記
 (unite-outlineはforkして持ってきている)
-4. Launch vim, run :BundleInstall.
+1. Launch vim, run :BundleInstall.
+
+mkdir ~/.vim; mkdir ~/.vim/backup; mkdir ~/.vim/swap
+
 
  * addした人以外
 1. git pull

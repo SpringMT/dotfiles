@@ -4,7 +4,7 @@ PATH=$HOME/bin:$PATH
 export PATH
 
 # less
-export LESS='-X -i -P ?f%f:(stdin). ?lb%lb?L/%L.. [?eEOF:?pb%pb\%..]'
+export LESS='-R -X -i -P ?f%f:(stdin). ?lb%lb?L/%L.. [?eEOF:?pb%pb\%..]'
 export JLESSCHARSET=japanese-ujis
 
 # alias
