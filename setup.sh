@@ -5,6 +5,7 @@ cd
 /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
 brew install git
 brew install lv
+brew install gist
 git clone git@github.com:SpringMT/dotfiles.git
 
 cat <<EOF > ~/.bashrc

@@ -7,6 +7,12 @@ export PATH
 export LESS='-R -X -i -P ?f%f:(stdin). ?lb%lb?L/%L.. [?eEOF:?pb%pb\%..]'
 export JLESSCHARSET=japanese-ujis
 
+# grep
+export GREP_OPTIONS='--color=auto'
+
+# gem
+export GEM_EDITOR="vim"
+
 # alias
 alias rm='rm -i'
 if [ `uname` = "Darwin" ]; then
@@ -16,6 +22,7 @@ elif [ `uname` = "Linux" ]; then
     alias ll='ls -l --color=tty'
     alias ls='ls --color=tty'
 fi
+alias pingg='ping google.com'
 
 # git
 if [ -r "/usr/local/etc/bash_completion.d/git-completion.bash" ]; then

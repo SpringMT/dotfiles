@@ -63,7 +63,7 @@ emacs -l ~/.emacs/init.el -nw file_name
 1. mkdir ~/.vim; mkdir ~/.vim/backup; mkdir ~/.vim/swap
 
 
-## addした人以外
+### addした人以外
 1. git pull
 1. git submodule
 (-がついている)
@@ -82,7 +82,13 @@ http://vim.g.hatena.ne.jp/tokorom/20110612/1307857274
    取得方法を変更
    git://github.com/SpringMT/unite-outline.git -> git@github.com:SpringMT/unite-outline.git
 
-## ref
+## githubの設定
+git config --global github.user <USER NAME>
+git config --global github.token <TOKEN>
+
+
+
+## reference
 ### Vundle
 http://shu-cream.blogspot.com/2011/04/2011vimvundle.html
 https://github.com/gmarik/vundle
@@ -94,5 +100,4 @@ https://github.com/h1mesuke/unite-outline
 ### git submodule and fork
 http://blog.s21g.com/articles/1401
 http://subtech.g.hatena.ne.jp/miyagawa/20090114/1231910461
-
 
