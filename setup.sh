@@ -6,6 +6,7 @@ cd
 brew install git
 brew install lv
 brew install gist
+brew install libyaml
 git clone git@github.com:SpringMT/dotfiles.git
 
 cat <<EOF > ~/.bashrc
