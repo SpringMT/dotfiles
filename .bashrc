@@ -25,8 +25,9 @@ fi
 alias pingg='ping google.com'
 
 # git
-if [ -r "/usr/local/etc/bash_completion.d/git-completion.bash" ]; then
-  source "/usr/local/etc/bash_completion.d/git-completion.bash"
+if [ -r "/usr/share/git-core/git-completion.bash" ]; then
+  source "/usr/share/git-core/git-prompt.sh"
+  source "/usr/share/git-core/git-completion.bash"
   PS1="[\u \[\033[1m\]\$(__git_ps1 \"%s \")\[\033[0m\]\w]\\$ "
 else
   :

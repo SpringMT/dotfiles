@@ -29,7 +29,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 " 全モードでマウスを有効化
-set mouse=a
+"set mouse=a
 
 " backup(mkdir ~/.vim mkdir ~/.vim/backup mkdir ~/.vim/swap)
 set backup
@@ -187,11 +187,11 @@ set autoindent
 "C言語スタイルのインデント機能が有効
 "set cindent
 " タブが対応する空白の数
-set tabstop=4
+set tabstop=2
 " タブやバックスペースの使用等の編集操作をするときに、タブが対応する空白の数
-set softtabstop=4
+set softtabstop=2
 " インデントの各段階に使われる空白の数
-set shiftwidth=4
+set shiftwidth=2
 " タブを挿入するとき、代わりに空白を使う
 set expandtab
 
