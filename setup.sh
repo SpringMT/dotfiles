@@ -20,10 +20,6 @@ if filereadable(expand('$HOME/dotfiles/.vimrc'))
 endif
 EOF
 
-# git setting
-git config --global color.ui true
-git config --global core.pager "lv -c"
-
 # vim setting
 cd ~/dotfiles
 mkdir $HOME/.vim
