@@ -34,6 +34,7 @@ function git_prompt_stash_count {
 # https://github.com/robbyrussell/oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
 plugins=(git ruby gem)
+ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 
 export PROMPT='[%n@%m] $(git_prompt_info)% %{$fg[yellow]%}%#%{$reset_color%} '

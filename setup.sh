@@ -4,9 +4,14 @@
 cd
 
 cat <<EOF > ~/.bashrc
-if [ -f $HOME/dotfiles/.bashrc ]; then
-    source $HOME/dotfiles/.bashrc
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+[ -f $HOME/dotfiles/.bashrc ] && source $HOME/dotfiles/.bashrc
 fi
+EOF
+
+cat <<EOF > ~/.zshrc
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+[ -f $HOME/dotfiles/.zshrc ] && source $HOME/dotfiles/.zshrc
 EOF
 
 cat <<EOF > ~/.vimrc
