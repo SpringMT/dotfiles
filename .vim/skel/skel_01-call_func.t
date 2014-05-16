@@ -3,7 +3,6 @@
 use strict;
 use warnings;
 
-use MbgaConf;
 use Test::More;
 use ;
 
