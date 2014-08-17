@@ -22,6 +22,9 @@ elif [ `uname` = "Linux" ]; then
     alias ls='ls --color=tty'
 fi
 alias pingg='ping google.com'
+alias pwgenc="pwgen -nB1 | tr '[a-z]' '[A-Z]' | pbcopy && pbpaste"
+
+alias ctagsr='ctags --langmap=RUBY:.rb --exclude="*.js"  --exclude=".git*" -R .'
 
 function git_prompt_stash_count {
   local COUNT=$(git stash list 2>/dev/null | wc -l | tr -d ' ')
@@ -40,7 +43,7 @@ source $ZSH/oh-my-zsh.sh
 export PROMPT='[%n@%m] $(git_prompt_info)% %{$fg[yellow]%}%#%{$reset_color%} '
 export RPROMPT='%{$fg[green]%}%~%{$reset_color%}'
 export ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}("
-export ZSH_THEME_GIT_PROMPT_SUFFIX="(%{`git_prompt_stash_count`%})%{$reset_color%} "
+export ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
 export ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%})%{$fg[red]%}✗%{$reset_color%}"
 export ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 

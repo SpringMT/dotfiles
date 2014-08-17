@@ -1,10 +1,83 @@
-set rtp+=~/dotfiles/.vim/bundle/vundle/
-call vundle#rc()
+" https://github.com/Shougo/neobundle.vim
+if has('vim_starting')
+
+  " Required:
+  set runtimepath+=~/dotfiles/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/dotfiles/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
 " My Bundles here
-Bundle 'unite.vim'
-Bundle 'git@github.com:SpringMT/unite-outline.git'
-Bundle 'git@github.com:SpringMT/AutoComplPop.git'
-Bundle 'git@github.com:SpringMT/mru.vim.git'
+" 補完
+NeoBundle 'Shougo/neocomplete'
+" neocompleteから英語辞書の利用
+NeoBundle 'https://github.com/ujihisa/neco-look.git'
+NeoBundle 'Shougo/unite.vim'
+"NeoBundle 'Shougo/unite-outline'
+"NeoBundle 'git://github.com/tsukkee/unite-tag.git'
+"NeoBundle 'git@github.com:SpringMT/AutoComplPop.git'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'alpaca-tc/alpaca_tags'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'errormarker.vim'
+NeoBundle 'scrooloose/syntastic'
+let g:syntastic_ruby_checkers = ['rubocop']
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+
+set runtimepath+=~/dotfiles/.vim/bundle/unite.vim/
+set runtimepath+=~/dotfiles/.vim/after/
+"set runtimepath+=~/dotfiles/.vim/bundle/unite-outline/
+"set runtimepath+=~/dotfiles/.vim/bundle/unite-tag/
+
+" alpaca_tags settings
+let g:alpaca_tags#config = {
+    \ '_' : '-R --sort=yes --languages=+Ruby --languages=-js,JavaScript',
+    \ 'js' : '--languages=+js',
+    \ '-js' : '--languages=-js,JavaScript',
+    \ 'vim' : '--languages=+Vim,vim',
+    \ 'php' : '--languages=+php',
+    \ '-vim' : '--languages=-Vim,vim',
+    \ '-style': '--languages=-css,scss,js,JavaScript,html',
+    \ 'scss' : '--languages=+scss --languages=-css',
+    \ 'css' : '--languages=+css',
+    \ 'java' : '--languages=+java $JAVA_HOME/src',
+    \ 'ruby': '--languages=+Ruby',
+    \ 'coffee': '--languages=+coffee',
+    \ '-coffee': '--languages=-coffee',
+    \ 'bundle': '--languages=+Ruby',
+    \ }
 
 "-----------------------------
 " base setting
@@ -141,14 +214,13 @@ highlight CursorLine cterm=bold ctermbg=black guibg=black
 "-----------------------------
 " compl
 "-----------------------------
-autocmd FileType * let g:AutoComplPop_CompleteOption = '.,w,b,u,t,i'
 " ポップアップメニューのカラーを設定
 "hi Pmenu guibg=#666666 guifg=#666666
 "hi PmenuSel guibg=#8cd0d3 guifg=#666666
 "hi PmenuSbar guibg=#333333 guifg=#666666
-highlight Pmenu ctermbg=0
-highlight PmenuSel ctermbg=4
-highlight PMenuSbar ctermbg=0
+highlight Pmenu ctermbg=white
+highlight PmenuSel ctermfg=white ctermbg=4
+highlight PMenuSbar ctermbg=2
 inoremap ,s <ESC>:AutoComplPopDisable<CR>a
 inoremap ,q <ESC>:AutoComplPopEnable<CR>a
 nnoremap ,s :AutoComplPopDisable<CR>
@@ -305,3 +377,21 @@ imap <C-x><C-f>  <ESC>:e
 "ウィンドウを縦に分割して、左側にExploreを起動
 map  <C-x><C-e> :Vexplore<CR>
 map <F6>  <ESC>:set encoding=utf8<CR>
+
+" uniteの設定 ======================================
+" 入力モードで開始する
+let g:unite_enable_start_insert=1
+let g:unite_enable_split_vertically = 1 "縦分割で開く
+let g:unite_winwidth = 40 "横幅40で開く
+" バッファ一覧
+nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+" ファイル一覧
+nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+ 
+" ESCキーを2回押すと終了する
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
+au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
+
+" tagsジャンプの時に複数ある時は一覧表示
+"nnoremap <C-]> g<C-]>
+
