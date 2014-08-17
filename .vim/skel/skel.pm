@@ -1,4 +1,4 @@
-package Mbga:: ;
+package ;
 
 use strict;
 use warnings;
