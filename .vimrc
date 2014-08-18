@@ -48,6 +48,11 @@ NeoBundle 'alpaca-tc/alpaca_tags'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'errormarker.vim'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'plasticboy/vim-markdown'
+au BufRead,BufNewFile *.md set filetype=markdown
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
+
 let g:syntastic_ruby_checkers = ['rubocop']
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
