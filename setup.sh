@@ -20,6 +20,11 @@ if filereadable(expand('$HOME/dotfiles/.vimrc'))
 endif
 EOF
 
+cat <<EOF > ~/.gitconfig
+[include]
+  path = ~/dotfiles/.gitconfig
+EOF
+
 # vim setting
 cd ~/dotfiles
 mkdir $HOME/.vim

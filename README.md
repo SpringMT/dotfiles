@@ -23,6 +23,13 @@ if [ -f $HOME/dotfiles/.screenrc ]; then
 fi
 ~~~
 
+### .gitconfig
+
+```
+[include]
+  path = ~/dotfiles/.gitconfig
+```
+
 ## bash memo
 
 ## vim memo

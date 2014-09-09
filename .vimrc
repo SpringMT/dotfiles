@@ -40,9 +40,8 @@ NeoBundle 'Shougo/neocomplete'
 " neocompleteから英語辞書の利用
 NeoBundle 'https://github.com/ujihisa/neco-look.git'
 NeoBundle 'Shougo/unite.vim'
-"NeoBundle 'Shougo/unite-outline'
-"NeoBundle 'git://github.com/tsukkee/unite-tag.git'
-"NeoBundle 'git@github.com:SpringMT/AutoComplPop.git'
+NeoBundle 'Shougo/unite-outline'
+NeoBundle 'git://github.com/tsukkee/unite-tag.git'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'alpaca-tc/alpaca_tags'
 NeoBundle 'tpope/vim-rails'
@@ -52,8 +51,9 @@ NeoBundle 'plasticboy/vim-markdown'
 au BufRead,BufNewFile *.md set filetype=markdown
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'elzr/vim-json'
 
-let g:syntastic_ruby_checkers = ['rubocop']
+"let g:syntastic_ruby_checkers = ['rubocop']
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplete.

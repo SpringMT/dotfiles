@@ -1,0 +1,11 @@
+[core]
+  editor = vim -c \"set fenc=utf-8\"
+[alias]
+  co = checkout
+  st = status
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+
