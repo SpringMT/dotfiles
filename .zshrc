@@ -25,6 +25,8 @@ alias pingg='ping google.com'
 alias pwgenc="pwgen -nB1 | tr '[a-z]' '[A-Z]' | pbcopy && pbpaste"
 
 alias ctagsr='ctags --langmap=RUBY:.rb --exclude="*.js"  --exclude=".git*" -R .'
+alias sslscanall='sslscan --show-certificate --show-client-cas --show-ciphers --show-cipher-ids --show-times'
+
 
 function git_prompt_stash_count {
   local COUNT=$(git stash list 2>/dev/null | wc -l | tr -d ' ')
