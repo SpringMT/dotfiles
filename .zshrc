@@ -39,7 +39,7 @@ function git_prompt_stash_count {
 # https://github.com/robbyrussell/oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
 plugins=(git ruby gem)
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 source $ZSH/oh-my-zsh.sh
 
 export PROMPT='[%n@%m] $(git_prompt_info)% %{$fg[yellow]%}%#%{$reset_color%} '
@@ -67,3 +67,4 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 # プロンプトに色を付ける
 autoload -U colors; colors
 
+export HOMEBREW_NO_AUTO_UPDATE=1

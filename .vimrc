@@ -108,6 +108,7 @@ endif
 
 " 全モードでマウスを有効化
 "set mouse=a
+"set mouse=""
 
 " backup(mkdir ~/.vim mkdir ~/.vim/backup mkdir ~/.vim/swap)
 set backup
@@ -214,7 +215,7 @@ endif
 
 :hi clear CursorLine
 :hi CursorLine gui=underline
-highlight CursorLine cterm=bold ctermbg=black guibg=black
+"highlight CursorLine cterm=bold ctermbg=black guibg=black
 
 "-----------------------------
 " compl
