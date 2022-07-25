@@ -273,6 +273,7 @@ set shiftwidth=2
 " タブを挿入するとき、代わりに空白を使う
 set expandtab
 
+
 " #### putline ####(\lineと打つ)
 let putline_tw = 30
 
@@ -322,6 +323,9 @@ augroup SkeletonAu
     autocmd BufNewFile 01-call_func.t 0r $HOME/dotfiles/.vim/skel/skel_01-call_func.t
     autocmd BufNewFile \%(00-compile\|01\-call_func)\@!*.t 0r $HOME/dotfiles/.vim/skel/skel.t
 augroup END
+
+" Go
+autocmd FileType go setlocal noexpandtab
 
 "-----------------------------
 " keymap
